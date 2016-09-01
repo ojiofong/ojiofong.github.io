@@ -8,13 +8,14 @@ description: "A brief overview on the small amount of infrastructure powering th
 published: true
 ---
 
-![ThreadPool Diagram](/images/thread-pool.png)
 
 The knowledge of thread pools is required in advanced Android application development. If you want to build the fastest app possible then you need to leverage multi-threading. This is a simplified introduction to Thread Pools and ThreadPoolExecutor on Android. This article is also relevant to Java development.
 
+*Note* — the code snippets in this article prioritize simplicity and readability over optimization. So, please let’s not nitpick about String concatenation or findViewById in a loop etc. However, any improvements related to the topic will be much appreciated.
 
-Please note that the code snippets in this article prioritize simplicity and readability over optimization. So, please let’s not nitpick about String concatenation or findViewById in a loop etc. However, any improvements related to the topic will be much appreciated.
 In order to understand ThreadPoolExecutor, we must know what a thread pool is.
+
+![ThreadPool Diagram](/images/thread-pool.png)
 
 ### What is a thread pool?
 
@@ -26,14 +27,17 @@ A thread pool is a collection of threads that can execute multiple instances of 
 ### Illustration
 
 Imagine that we want to do some work that involves performing 100 asynchronous tasks that will take 1 second each to process. If executed on a single thread, it will take 100 seconds to complete. Now if we did the same work using a thread pool of 10 threads; because each thread will execute 10 tasks each in parallel, it will now take only 10 seconds. Based on this example we have leveraged thread pools to achieve a reduced per task overhead that improved the time efficiency by 10 times or 1000%. Awesome! Isn’t it?
+
 By now you’re probably thinking: “I get thread pools now, it makes sense to me. Now can we get to ThreadPoolExecutor?”. Sure. The good news is that you now have the base knowledge so let’s proceed.
 
-**ThreadPoolExecutor** — Manages and assigns tasks to a thread pool or pool of threads. The way it works under the hood is that tasks to be run are kept in a work queue or a task queue. From the work queue, a task is assigned to a thread, whenever a thread in the pool becomes free or available. Please refer to the image above for illustration.
+**ThreadPoolExecutor** — Manages and assigns tasks to a thread pool or pool of threads. The way it works under the hood is that tasks to be run are kept in a work queue or a task queue. From the work queue, a task is assigned to a thread, whenever a thread in the pool becomes free or available. *Please refer to the image above for illustration.*
 
 ### Why use ThreadPoolExecutor?
 
-Threads by default do only three things they start, do some work and terminate (if no work is being done). The process of keeping idle threads alive as implemented on Android Main Thread (UI Thread) is outside the scope of this topic, so I will keep it very simple. It is achieved by pretending to be doing some work on the thread and Android achieves this by using a Looper.
-Furthermore, when dealing with a collection of threads it adds new layers of complexity since we will have to bound and manage resources and threads. Writing the code to handle all these may not be as fun as you think. It also increases the likelihood of running into bugs associated with multi-threaded environments.
+Threads by default do only three things; they start, do some work and terminate (if no work is being done). The process of keeping idle threads alive as implemented on Android Main Thread (UI Thread) is outside the scope of this topic, so I will keep it very simple; It requires pretending to be doing some work on the thread by running a message loop. Android achieves this by using a [Looper][looper_link].
+
+Furthermore, when dealing with a collection of threads, it adds new layers of complexity since we will have to bound and manage resources and threads. Writing the code to handle all these may not be as fun as you think. It also increases the likelihood of running into bugs associated with multi-threaded environments.
+
 ThreadPoolExecutor abstracts all of these, and allows us to easily manage and assign tasks to a pool of threads. It even takes care of terminating the threads for us appropriately.
 
 Here are some related terminologies to know.
@@ -49,7 +53,7 @@ Runnable mRunnable = new Runnable() {
 };
 ```
 
-Executor — An object that executes runnable. e.g.
+**Executor** — An object that executes runnable. e.g.
 
 ```java
 mExecutor.execute(mRunnable);
@@ -70,7 +74,7 @@ ThreadPoolExecutor(
 
 ### ThreadPoolExecutor Example
 
-This example shows how to use a simple ThreadPoolExecutor to perform 100 asynchronous tasks. The snippets below contain an Activity class and a Layout file that illustrate a simple android app that will help us visually compare thread pool performance against a single thread’s.
+This example shows how to use a simple ThreadPoolExecutor to perform 100 asynchronous tasks. The snippets below contain an Activity class and a Layout file that illustrate a simple android app that will help us visually compare thread pool performance against a single thread’s performance.
 In order to see the performance difference, you will have to build and run the code.
 
 Feel free to include the full snippets in your android project.
@@ -79,7 +83,7 @@ Feel free to include the full snippets in your android project.
 <style type="text/css">
   .gist {overflow:auto !important;}
   .gist-file
-  .gist-data {max-height: 700px; max-width: auto;}
+  .gist-data {max-height: 600px; max-width: auto;}
 </style>
 
 <script src="https://gist.github.com/ojiofong/4b8bd2edce4644fa734634caaab3d222.js"></script>
@@ -93,18 +97,18 @@ The Activity class is accompanied by a very simple layout. It's optional to incl
 
 More threads are not always good because CPU can only execute a certain number of threads in parallel. Once we exceed that number, CPU has to make some expensive calculation to decide which thread should get assigned based on priority. Depending on the number of excess unnecessary threads, your program can hit a break even point where it is not any faster. In addition, threads are associated with a minimum memory overhead of 64k that can add up quickly.
 
-I would recommend allocating threads based on the number of available cores. This is achieved in Java via:
+It is usually recommend to allocate threads based on the number of available cores. This is achieved in Java via:
 
 ```java
 int NUMBER_OF_CORES = Runtime.getRuntime().availableProcessors();
 ```
 
-Note that this does not necessarily return the actual number of physical cores on the device. It is possible that CPU may deactivate some cores to save battery etc.
+*Note* — this does not necessarily return the actual number of physical cores on the device. It is possible that CPU may deactivate some cores to save battery etc.
 
 ### Conclusion
 We have learned a bit about threads, what thread pools are, why we need it and how to use it. We now know that we use ThreadPoolExecutor to conveniently manage and assign tasks to a pool of threads. We have also looked at a program that illustrates a simple usage of ThreadPoolExecutor.
 
-In summary, ThreadPoolExecutor allows us to create a number threads and assign a number of work to be done. It takes care of handling load balancing of work across the threads, and termination of threads that are no longer needed.
+In summary, ThreadPoolExecutor allows us to create a number of threads and assign a number of work to be done. It takes care of handling load balancing of work across the threads, and also the termination of threads that are no longer needed.
 
 There are a lot more to know, but we have managed to learn a lot while keeping things simple. Hopefully, we are now able to jump right in and start using thread pools to build more efficient Android applications.
 
@@ -113,15 +117,15 @@ For further reading please refer to the references below.
 ### References:
 
 Creating a Manager for Multiple Threads | Android Developers
-[https://developer.android.com/training/multiple-threads/create-threadpool.html][1]{:target="_blank"}
+[https://developer.android.com/training/multiple-threads/create-threadpool.html][1]
 
 ThreadPoolExecutor (Java Platform SE 7 )
-[https://docs.oracle.com/javase/7/docs/api/java/util/concurrent/ThreadPoolExecutor.html][2]{:target="_blank"}
+[https://docs.oracle.com/javase/7/docs/api/java/util/concurrent/ThreadPoolExecutor.html][2]
 
 Swimming in Threadpools. (Android Performance Patterns Season 5, Ep. 6)
-[https://www.youtube.com/watch?v=uCmHoEY1iTM][3]{:target="_blank"}
-
+[https://www.youtube.com/watch?v=uCmHoEY1iTM][3]
 
 [1]: https://developer.android.com/training/multiple-threads/create-threadpool.html
 [2]: https://docs.oracle.com/javase/7/docs/api/java/util/concurrent/ThreadPoolExecutor.html
 [3]: https://www.youtube.com/watch?v=uCmHoEY1iTM
+[looper_link]: https://developer.android.com/reference/android/os/Looper.html
