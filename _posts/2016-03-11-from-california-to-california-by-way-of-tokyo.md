@@ -1,4 +1,5 @@
 ---
+layout: post
 title:  "From California to California by way of Tokyo"
 date:   2016-03-11 01:00:00
 categories: [Tech]
@@ -73,7 +74,7 @@ server-54-192-234-169.nrt12.r.cloudfront.net.
 ```
 Now this is strange... All of the edge nodes are located in Tokyo. This does not seem right at all, but why is Level3 the only resolver affected by this? The answer will probably surprise you!
 
-Believe it or not there is actually a good reason for this! 
+Believe it or not there is actually a good reason for this!
 
 ### How Amazon routes Cloudfront requests
 
@@ -153,7 +154,7 @@ At this point I am still convinced that this is a just a Cloudfront bug. Even wi
 
 Amazon support tells me that this is actually the correct behavior because most clients from this resolver are located in Toyko. This makes no sense at all and don't buy it, is AWS lying to me!? A kind Cloudfront engineer hopped on the phone with me after I inquired for a technical explanation for this crazy behavior.
 
-This is where I learned that Amazon also keeps track of the resolver a client is using along with their geographical location whenever they visit an Amazon owned website. This data is then used to make an even better decision about where to route the traffic. Using this data they found that a large majority of users who were using the Level3 resolver in San Jose, CA were actually located in Japan. In fact, there were more people connecting to this resolver from Japan than California. This means that it would actually make more sense for Amazon to respond with the IPs of the POP in Tokyo because a larger percentage of users of this DNS resolver are probably located there. 
+This is where I learned that Amazon also keeps track of the resolver a client is using along with their geographical location whenever they visit an Amazon owned website. This data is then used to make an even better decision about where to route the traffic. Using this data they found that a large majority of users who were using the Level3 resolver in San Jose, CA were actually located in Japan. In fact, there were more people connecting to this resolver from Japan than California. This means that it would actually make more sense for Amazon to respond with the IPs of the POP in Tokyo because a larger percentage of users of this DNS resolver are probably located there.
 
 Surely Level3 has a resolver in Japan or somewhere nearby... They are Anycasted from everywhere right!?
 At the time of this blog post Level3 does not appear to have any DNS servers in japan. I fired up a EC2 instance in Japan to verify this.

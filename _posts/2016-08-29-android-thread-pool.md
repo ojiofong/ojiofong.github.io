@@ -1,15 +1,16 @@
 ---
 layout: post
-title:  "How this site is hosted"
-date:   2016-02-25 22:00:00
+title:  "Introduction to Android Thread Pool and ThreadPoolExecutor"
+date:   2016-08-29 21:30:00
 categories: [Tech]
-tags: [infrastructure]
+#tags: [android][android app development][android threading]
 description: "A brief overview on the small amount of infrastructure powering this site."
+published: true
 ---
-A brief overview on the small amount of infrastructure powering this site.
+The knowledge of thread pools is required in advanced Android application development. If you want to build the fastest app possible then you need to leverage multi-threading. This is a simplified introduction to Thread Pools and ThreadPoolExecutor on Android. This article is also relevant to Java development.
 
 ### Topology
-![Topology Diagram](/images/alexmgraham_com_topology.png)
+<!-- ![ThreadPool Diagram](/images/thread-pool.png) -->
 
 ### Cloudfront with ACM
 I am using a free Wildcard SSL certificate from Amazon Certificate Manager combined with [Cloudfront][cloudfront].
