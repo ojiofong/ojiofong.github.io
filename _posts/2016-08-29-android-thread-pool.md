@@ -10,7 +10,7 @@ published: true
 The knowledge of thread pools is required in advanced Android application development. If you want to build the fastest app possible then you need to leverage multi-threading. This is a simplified introduction to Thread Pools and ThreadPoolExecutor on Android. This article is also relevant to Java development.
 
 ### Topology
-<!-- ![ThreadPool Diagram](/images/thread-pool.png) -->
+![ThreadPool Diagram](/images/thread-pool.png)
 
 ### Cloudfront with ACM
 I am using a free Wildcard SSL certificate from Amazon Certificate Manager combined with [Cloudfront][cloudfront].
