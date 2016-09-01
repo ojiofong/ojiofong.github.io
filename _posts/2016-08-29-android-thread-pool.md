@@ -15,8 +15,6 @@ The knowledge of thread pools is required in advanced Android application develo
 
 In order to understand ThreadPoolExecutor, we must know what a thread pool is.
 
-![ThreadPool Diagram](/images/thread-pool.png)
-
 ### What is a thread pool?
 
 A thread pool is a collection of threads that can execute multiple instances of a task in parallel. Because tasks execute in parallel, you may want to ensure that your code is thread safe. A thread pool addresses two problems:
@@ -30,7 +28,10 @@ Imagine that we want to do some work that involves performing 100 asynchronous t
 
 By now you’re probably thinking: “I get thread pools now, it makes sense to me. Now can we get to ThreadPoolExecutor?”. Sure. The good news is that you now have the base knowledge so let’s proceed.
 
-**ThreadPoolExecutor** — Manages and assigns tasks to a thread pool or pool of threads. The way it works under the hood is that tasks to be run are kept in a work queue or a task queue. From the work queue, a task is assigned to a thread, whenever a thread in the pool becomes free or available. *Please refer to the image above for illustration.*
+**ThreadPoolExecutor** — Manages and assigns tasks to a thread pool or pool of threads. The way it works under the hood is that tasks to be run are kept in a work queue or a task queue. From the work queue, a task is assigned to a thread, whenever a thread in the pool becomes free or available. *Please refer to the image below for illustration.*
+
+![ThreadPool Diagram](/images/thread-pool.png)
+*This awesome image was gotten from* [here][pool_img_link]
 
 ### Why use ThreadPoolExecutor?
 
@@ -129,3 +130,4 @@ Swimming in Threadpools. (Android Performance Patterns Season 5, Ep. 6)
 [2]: https://docs.oracle.com/javase/7/docs/api/java/util/concurrent/ThreadPoolExecutor.html
 [3]: https://www.youtube.com/watch?v=uCmHoEY1iTM
 [looper_link]: https://developer.android.com/reference/android/os/Looper.html
+[pool_img_link]: http://allegro.tech/img/articles/2015-04-22-thread-pools/thread-pool.png
