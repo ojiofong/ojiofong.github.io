@@ -29,6 +29,10 @@ permalink: pretty
 markdown: kramdown
 highlighter: rouge
 
+  # do not cache in development - remove in production
+sass:
+  cache: false
+
 kramdown:
   # use Github Flavored Markdown
   input: GFM

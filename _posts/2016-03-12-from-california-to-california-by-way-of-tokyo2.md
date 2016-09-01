@@ -1,10 +1,10 @@
 ---
 layout: page
-title:  "From California to California by way of Tokyo2"
+title:  "From Palo Alto by way of Beijing"
 date:   2016-03-12 01:00:00
 categories: [Tech]
 tags: [infrastructure]
-description: "The story of a confused request who made it's way from California to Tokyo only to be sent right back to California."
+description: "The story of a confused hiker who got lost."
 published: true
 ---
 The story of a confused request who made it's way from California to Tokyo only to be sent right back to California.
