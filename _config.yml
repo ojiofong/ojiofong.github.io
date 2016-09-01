@@ -1,0 +1,39 @@
+# Site settings
+title: Oji Ofong
+description: 'Just another dev from somewhere on earth'
+url: 'https://ojiofong.github.io'
+baseurl: '/'
+google_analytics: 'UA-00000-1-change-this'
+disqus_shortname: 'blahblah-change-this'
+
+author:
+  name: 'Oji Ofong'
+  email: ojiofong@gmail.com
+#  twitter_username: ojiofong
+#  facebook_username: ojiofong
+  github_username:  ojiofong
+  linkedin_username:  oji-ofong-780ba0b0
+
+defaults:
+  -
+    scope:
+      path: ''
+      type: 'posts'
+    values:
+        layout: 'post'
+
+# Build settings
+destination: _site
+paginate: 10
+permalink: /:year/:title/
+markdown: kramdown
+highlighter: rouge
+
+kramdown:
+  # use Github Flavored Markdown
+  input: GFM
+  # do not replace newlines by <br>s
+  hard_wrap: false
+
+gems: ['jekyll-paginate', 'jekyll-gist', 'jemoji', 'jekyll-email-protect']
+exclude: ['README.md', 'Gemfile', 'Gemfile.lock', 'screenshot.png']
