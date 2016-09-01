@@ -7,7 +7,13 @@ A little bit about nothing...
 
 Nothing here
 
-<style type="text/css"> .gist {height:500px; overflow:auto} </style>
+<!-- <style type="text/css"> .gist {height:500px; overflow:auto} </style> -->
+
+<style type="text/css">
+  .gist {overflow:auto !important;}
+  .gist-file
+  .gist-data {max-height: 700px; max-width: auto;}
+</style>
 
 <script src="https://gist.github.com/ojiofong/4b8bd2edce4644fa734634caaab3d222.js"></script>
 
