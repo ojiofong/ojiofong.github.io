@@ -3,7 +3,7 @@ layout: post
 title:  "How this site is hosted"
 date:   2016-02-25 22:00:00
 categories: [Tech]
-tags: [infrastructure]
+tags: [infrastructure,android]
 description: "A brief overview on the small amount of infrastructure powering this site."
 ---
 A brief overview on the small amount of infrastructure powering this site.

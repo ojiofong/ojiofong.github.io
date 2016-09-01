@@ -3,7 +3,7 @@ layout: post
 title:  "Introduction to Android Thread Pool and ThreadPoolExecutor"
 date:   2016-08-29 21:30:00
 categories: [Tech]
-#tags: [android][android app development][android threading]
+tags: [android]
 description: "A brief overview on the small amount of infrastructure powering this site."
 published: true
 ---
