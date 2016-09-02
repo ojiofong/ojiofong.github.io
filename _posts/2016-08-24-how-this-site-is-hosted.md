@@ -1,10 +1,11 @@
 ---
 layout: post
 title:  "How this site is hosted"
+description: "A brief overview on how this site is hosted."
 date:   2016-08-24 22:00:00
 categories: [Tech]
 tags: [infrastructure]
-description: "A brief overview on how this site is hosted."
+comments: true
 ---
 A brief overview on how this site is hosted.
 
