@@ -90,14 +90,14 @@ Feel free to include the full snippets in your android project.
 
 <script src="https://gist.github.com/ojiofong/4b8bd2edce4644fa734634caaab3d222.js"></script>
 
-The Activity class is accompanied by a very simple layout. It's optional to include it but for the sake of convenience I will include the snippet below.
+The Activity class is accompanied by a simple layout. It is optional to include it here, but for the sake of convenience I will include it below.
 
 <script src="https://gist.github.com/ojiofong/1ee09c2759b5ff93993f6eef12ce8e2c.js"></script>
 
 
 ### More threads are not always good
 
-More threads are not always good because CPU can only execute a certain number of threads in parallel. Once we exceed that number, CPU has to make some expensive calculation to decide which thread should get assigned based on priority. Depending on the number of excess unnecessary threads, your program can hit a break even point where it is not any faster. In addition, threads are associated with a minimum memory overhead of 64k that can add up quickly.
+More threads are not always good because CPU can only execute a certain number of threads in parallel. Once we exceed that number, CPU has to make some expensive calculation to decide which thread should get assigned based on priority. Depending on the number of excess unnecessary threads, your program can hit a break even point where it is not any faster, if not slower. In addition, threads are associated with a minimum memory overhead of 64k that can add up quickly.
 
 It is usually recommend to allocate threads based on the number of available cores. This is achieved in Java via:
 
