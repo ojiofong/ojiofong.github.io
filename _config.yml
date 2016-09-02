@@ -4,15 +4,15 @@ description: 'Just another dev from somewhere on earth'
 url: 'https://ojiofong.github.io'
 baseurl: '/'
 google_analytics: 'UA-00000-1-change-this'
-disqus_shortname: 'blahblah-change-this'
+disqus_shortname: 'ojiofong-github-io'
 
 author:
   name: 'Oji Ofong'
   email: ojiofong@gmail.com
-#  twitter_username: ojiofong
-#  facebook_username: ojiofong
   github_username:  ojiofong
   linkedin_username:  oji-ofong-780ba0b0
+#  twitter_username: ojiofong
+#  facebook_username: ojiofong
 
 defaults:
   -

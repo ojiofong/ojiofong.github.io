@@ -6,6 +6,7 @@ categories: [Tech]
 tags: [android]
 description: "A brief overview on the small amount of infrastructure powering this site."
 published: true
+comments: true
 ---
 
 
