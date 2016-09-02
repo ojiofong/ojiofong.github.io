@@ -10,7 +10,7 @@ comments: true
 ---
 
 
-The knowledge of thread pools is required in advanced Android application development. If you want to build the fastest app possible then you need to leverage multi-threading. This is a simplified introduction to Thread Pools and ThreadPoolExecutor on Android. This article is also relevant to Java development.
+The knowledge of thread pool is required in advanced Android application development. If you want to build the fastest app possible then you need to leverage multi-threading. This is a simplified introduction to Thread Pools and ThreadPoolExecutor on Android. This article is also relevant to Java development.
 
 *Note* — the code snippets in this article prioritize simplicity and readability over optimization. So, please let’s not nitpick about String concatenation or findViewById in a loop etc. However, any improvements related to the topic will be much appreciated.
 
