@@ -19,7 +19,13 @@ A brief overview on how this site is hosted.
 * Github Pages: Free!
 * SSL Certificate: Free!
 
-Overall, it costs nothing but effort to get this up and running. Join the club and convert your thoughts.toString();
+Overall, it costs nothing but personal effort to get this up and running. Join the club and run the code below:
+
+```java
+while(true){
+  System.out.println(thoughts.toString());
+}
+```
 
 [pages_cdn]:      https://github.com/blog/1715-faster-more-awesome-github-pages
 [alexmgraham_repo]:      https://github.com/alexmgraham/alexmgraham.github.io
