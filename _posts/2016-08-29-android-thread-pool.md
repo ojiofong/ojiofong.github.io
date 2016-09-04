@@ -97,9 +97,9 @@ The Activity class is accompanied by a simple layout. It is optional to include 
 
 ### More threads are not always good
 
-More threads are not always good because CPU can only execute a certain number of threads in parallel. Once we exceed that number, CPU has to make some expensive calculation to decide which thread should get assigned based on priority. Depending on the number of excess unnecessary threads, your program can hit a break even point where it is not any faster, if not slower. In addition, threads are associated with a minimum memory overhead of 64k that can add up quickly.
+More threads are not always good because CPU can only execute a certain number of threads in parallel. Once we exceed that number, CPU has to make some expensive calculation to decide which thread should get assigned based on priority. Depending on the number of excess unnecessary threads, your program can hit a break-even point where it is not any faster, if not slower. In addition, threads are associated with a minimum memory overhead of 64k that can add up quickly.
 
-It is usually recommend to allocate threads based on the number of available cores. This is achieved in Java via:
+It is usually recommended to allocate threads based on the number of available cores. This is achieved in Java via:
 
 ```java
 int NUMBER_OF_CORES = Runtime.getRuntime().availableProcessors();
