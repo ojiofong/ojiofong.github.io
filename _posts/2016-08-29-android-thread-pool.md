@@ -83,7 +83,7 @@ ThreadPoolExecutor(
 
 ### ThreadPoolExecutor Example
 
-This example shows how to use a simple ThreadPoolExecutor to perform 100 asynchronous tasks. The snippets below contain an Activity class and a Layout file that illustrate a simple android app that will help us visually compare thread pool performance against a single thread’s performance.
+This example shows how to use ThreadPoolExecutor to perform 100 asynchronous tasks. The snippets below contain an Activity class and a Layout file that illustrate a simple android app that will help us visually compare thread pool performance against a single thread’s performance.
 In order to see the performance difference, you will have to build and run the code.
 
 Feel free to include the full snippets in your android project.
