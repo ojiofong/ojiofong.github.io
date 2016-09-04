@@ -58,10 +58,17 @@ Runnable mRunnable = new Runnable() {
 **Executor** — An object that executes runnable. e.g.
 
 ```java
+Executor mExecutor = Executors.newSingleThreadExecutor();
 mExecutor.execute(mRunnable);
 ```
 
-**ExecutorService** — An Executor that manages asynchronous tasks.
+**ExecutorService** — An Executor that manages asynchronous tasks. e.g.
+
+```java
+ExecutorService mExecutorService = Executors.newFixedThreadPool(10);
+mExecutorService.execute(mRunnable);
+```
+
 
 **ThreadPoolExecutor** — An ExecutorService that assigns tasks to a pool of threads. An instance can be created by providing the arguments to the constructor below.
 
