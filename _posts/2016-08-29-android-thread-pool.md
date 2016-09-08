@@ -4,7 +4,7 @@ title:  "Introduction to Android Thread Pool and ThreadPoolExecutor"
 date:   2016-08-29 21:30:00
 categories: [Tech]
 tags: [android]
-description: "A brief overview on the small amount of infrastructure powering this site."
+description: "A simplified introduction to Thread Pools and ThreadPoolExecutor on Android"
 published: true
 comments: true
 ---
