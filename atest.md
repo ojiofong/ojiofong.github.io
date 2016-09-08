@@ -17,7 +17,7 @@ Android 7.0 (Nougat) allows two applications to run on one screen side by side a
 
 
 ![Split Screen Diagram](/images/split-screen.png)
-*This image was gotten from* [here][split_img_link]
+*Image of an android phone in multi-window mode.* [Image source][split_img_link]
 
 ### Overview
 Multi window display is available in Android 7.0 (Nougat) only. In order to customize how your app responds to Multi Window display you must target at least API Level 24 (Android 7.0).
@@ -70,5 +70,5 @@ android:resizeableActivity="false"
 
 
 
-[multi_window]. https://developer.android.com/guide/topics/ui/multi-window.html
+[multi_window]: https://developer.android.com/guide/topics/ui/multi-window.html
 [split_img_link]: https://developer.android.com/images/android-7.0/mw-splitscreen_2x.png
