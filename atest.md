@@ -1,3 +1,8 @@
+---
+layout: page
+title: A test page
+permalink: /atest
+---
 <!-- ---
 layout: post
 title:  "Building Android Apps for Multi Window support"
