@@ -1,4 +1,4 @@
----
+<!-- ---
 layout: post
 title:  "Building Android Apps for Multi Window support"
 description: "A brief overview on how this site is hosted."
@@ -7,7 +7,7 @@ categories: [Tech]
 tags: [android]
 published: false
 comments: true
----
+--- -->
 Android 7.0 (Nougat) allows two applications to run on one screen side by side at the same time. This feature is called the Split Screen Mode or Multi Window Mode. This awesome update enables users to multitask with ease and hence increasing productivity. However, for android  developers this means that it no longer business as usual, we now have to build android apps that provide a good user experience in Multi Window Mode. You can learn more about multi-window mode [here][multi_window]. This article focuses building multi-window aware apps for phones and tablets.
 
 
