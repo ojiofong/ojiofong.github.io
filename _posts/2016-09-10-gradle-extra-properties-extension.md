@@ -1,30 +1,25 @@
 ---
-layout: page
-title: A test page
-regenerate: true
-permalink: /atest
----
-<!-- ---
 layout: post
 title:  "Using Gradle Extra Properties Extension to manage Android dependencies version"
 description: "Gradle is a flexible and advanced build system. Using Gradle Extra property we can conveniently manage Android dependencies, SDK and buildTools version"
-date:   2016-09-09 15:33:00
+date:   2016-09-10 12:30:00 AM
 categories: [Tech]
 tags: [android, gradle]
-published: false
+published: true
 comments: true
---- -->
+regenerate: true
+---
 
-Gradle is a flexible and advanced build system. Android Studio adopted gradle due to its flexibility, good tooling API, dependency management through Maven etc. The language used by Gradle is Groovy. A gradle project has a build.gradle file in the root of the project directory. The build.gradle file describes the build configuration for the project.
+Gradle is an advanced build system. Android Studio adopted gradle due to its flexibility, good tooling API, dependency management through Maven etc. The language used by Gradle is [Groovy][groovy_site]. A gradle project has a ```build.gradle``` file in the root of the project directory. This gradle file describes the build configuration for the project.
 
-This article is about using gradle Extra Properties Extension to manage dependency versions and configurations, conveniently across your entire project.
+This article is about using gradle [Extra Properties Extension][extra_properties_extension] to manage dependency versions and configurations, conveniently across the entire project.
 
 
 ### Problem
 
 Whenever there's a version update to a library or build tools version in your build.gradle file, most developers are daunted by the repetitive task of manually inputting the new version for every library dependency. For e.g. if android support libraries version changes then you will have update the versions everywhere.
 
-A basic build.gradle file within the app module would similar to this
+A basic build.gradle file within the app module would similar to this:
 
 ```java
 apply plugin: 'com.android.application'
@@ -49,7 +44,7 @@ dependencies {
 }
 ```
 
-From the snippet above, we have four repeated versions ```24.1.1``` from com.android.support library alone. It gets worse and compounds easily if you have multiple modules within your project. However, there is a solution.
+From the snippet above, we have four repeated versions ```24.1.1``` from com.android.support library dependencies alone. It gets worse and compounds easily if you have multiple modules within your project. However, there is a solution.
 
 ### Solution
 
@@ -98,7 +93,7 @@ dependencies {
 
 ### Important
 
-*Double quotation mark* - Note the use of double quotation within dependencies (instead of single quotation).
+Note the use of *double quotation* within dependencies (instead of single quotation).
 
 We changed from single quoted strings e.g.
 
@@ -128,6 +123,12 @@ Groovy Language Documentation
 
 
 
+
+
+
+
 [gradle_guide]: http://tools.android.com/tech-docs/new-build-system/user-guide
 [groovy_interpolation]: http://docs.groovy-lang.org/latest/html/documentation/index.html#_string_interpolation
 [groovy_doc]: http://docs.groovy-lang.org/latest/html/documentation/index.html
+[groovy_site]: http://groovy-lang.org/
+[extra_properties_extension]: https://docs.gradle.org/current/dsl/org.gradle.api.plugins.ExtraPropertiesExtension.html

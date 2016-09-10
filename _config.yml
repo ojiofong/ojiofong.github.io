@@ -29,6 +29,7 @@ permalink: pretty
 port: 4000
 markdown: kramdown
 highlighter: rouge
+timezone: America/New_York
 
   # do not cache in development - remove in production
 sass:
