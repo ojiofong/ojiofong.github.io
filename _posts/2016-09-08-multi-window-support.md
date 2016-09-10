@@ -28,10 +28,7 @@ defaultConfig {
   }
 ```
 
-The Android device determines how your app will be displayed in Multi Window display.
-
-* Two apps can be displayed to fill one screen side by side or over another. The dimensions can also be adjusted by dragging on the dividing line between them.
-* In addition to split-screen, larger devices can allow apps to be adjusted to any form if free form mode is enabled.
+The Android device determines how your app will be displayed in Multi Window display. Two apps can be displayed to fill one screen side by side or over another. The dimensions can also be adjusted by dragging on the dividing line between them. In addition to split-screen, larger devices can allow apps to be adjusted to any form if free form mode is enabled.
 
 ### Switching device to Multi Window
 
