@@ -17,9 +17,9 @@ This article is about using gradle [Extra Properties Extension][extra_properties
 
 ### Problem
 
-Whenever there's a version update to a library or build tools version in your build.gradle file, most developers are daunted by the repetitive task of manually inputting the new version for every library dependency. For e.g. if android support libraries version changes then you will have update the versions everywhere.
+Whenever there's a version update to a library or build tools version, most developers are daunted by the repetitive task of manually inputting the new version for every library dependency. For e.g. if android support libraries version changes then you will have to update the versions everywhere they are used.
 
-A basic build.gradle file within the app module would similar to this:
+A basic ```build.gradle``` file within the app module would look similar to this:
 
 ```java
 apply plugin: 'com.android.application'
