@@ -10,7 +10,7 @@ comments: true
 regenerate: true
 ---
 
-Android 7.0 (Nougat) allows two Activities/Applications to run on one screen side by side at the same time. This feature is called the Split Screen Mode or Multi Window Mode. This enables users to multitask with ease and hence increases productivity. However, for android developers this means that it no longer business as usual, we now have to build android apps that provide a good user experience in Multi Window Mode.
+Android 7.0 (Nougat) allows two Activities/Applications to run on one screen side by side at the same time. This feature is called the Split Screen Mode or Multi Window Mode. This enables users to multitask with ease and hence increases productivity. However, for android developers this means that it is no longer business as usual, you have to develop android apps that provide a good user experience in Multi Window Mode.
 
 This article focuses on developing multi-window aware apps for android phones and tablets. You can learn more about multi-window mode [here][multi_window].
 
